@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	  
+	<link href="css/styleguide.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title class="text-center">ARPAS</title>
+  </head>
+	<body class="body-screen" style="background-color: white;">
+	<!--navigation-->
+	<div style="height: 160px;">
+    	<nav class="navbar nav-autolayout" id="nav-box" style="height: 160px;">
+		<!--row 1-->
+        <div class="strech-content-row" style="align-self: stretch; height: 60px">
+			<div class="autolayout-row-center">
+				<img src="logo.png" alt="logo ARPAS">
+				<form>
+    				<input class="nav-search" type="search" placeholder="Search" aria-label="Search">
+  				</form>
+			</div>
+			<div class="autolayout-row-center">
+				<div class="dropdown">
+  					<button onclick="myFunction()" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" style="background-color: #FFFFFF; color: black; border: thin"><img src="icons/user.svg" style="height: 16px; margin-right: 8px; align-self: center">Moje konto</button>
+ 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    					<a class="dropdown-item" href="#">Ustawienia</a>
+    					<a class="dropdown-item" href="#">Moj profil</a>
+						<div class="dropdown-divider"></div>
+    					<a class="dropdown-item" href="#">Wyloguj</a>
+  					</div>
+				</div>
+			</div>
+		</div>
+		<!--row 2-->
+		<div class="strech-content-row" style="align-self: stretch;">
+			<div class="autolayout-row-center" style="align-self: stretch; gap: 40px;">
+				<a href="dashboard.html" style="text-decoration: none; color: black;">Dashboard</a>
+				<a href="Katalogi.html" style="font-weight: 600; font-size: 16px; line-height: 17px; text-decoration: none; color: black">Moje katalogi</a>
+				<a href="Prace_Student.html" style="text-decoration: none; color: black;">Moje prace</a>
+				<a>Moje oceny</a>
+			</div>
+			<button class="b-primary-deafult" style="color: white"><img src="icons/plus.svg">Dodaj nową pracę</button>
+		</div>
+	</nav>
+	</div>
+	<!--box for label and catalogs for 22/23 winter-->
+	<div class="autolayout-column-left" style="padding: 40px 10% 24px 10%; gap: 16px;">
+			<!--box for label-->
+			<div class="autolayout-row-left" style="align-self: stretch">
+				<a><h2 class="header-main" style="width: 800px;">Rok akademicki 2022/2023 - semestr zimowy</h2></a>
+			</div>
+			<div class="autolayout-row-left" style="gap: 24px;">
+				<!--subject 1-->
+				<div class="card" style="width: 270px; height: 170px;">
+  					<div class="strech-content-column-right">
+						<div style="height: 80px;">
+    						<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Computer Architecture</h5>
+    						<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CTxxx-ISA-ECOAR]</p>
+							<div class="badge-purple"><h6 class="badge-purple-text" style="width: 50px;">Wykład</h6></div>
+						</div>
+					<a><button style="margin-top: 24px; background-color: #949AD6; color: white; border: thin; border-radius: 4px; padding: 4px 8px;">Dodaj pracę</button></a>
+					</div>
+				</div>
+				<!--subject 2-->
+				<div class="card" style="width: 270px; height: 170px;">
+  					<div class="strech-content-column-right">
+						<div style="height: 80px;">
+    						<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Cryptography and Information Security</h5>
+		    				<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CSCSN-ISA-ECRYP]</p>
+						</div>
+						<a><button style="margin-top: 24px; background-color: #949AD6; color: white; border: thin; border-radius: 4px; padding: 4px 8px;">Dodaj pracę</button></a>
+  					</div>
+				</div>
+				<!--subject 3-->
+				<div class="card" style="width: 270px; height: 170px;">
+  					<div class="strech-content-column-right">
+						<div style="height: 80px;">
+    						<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Languages, Automata and Computation</h5>
+    						<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CSCSN-ISA-ELAC]</p>
+						</div>
+					<a><button style="margin-top: 24px; background-color: #949AD6; color: white; border: thin; border-radius: 4px; padding: 4px 8px;">Dodaj pracę</button></a>
+  					</div>
+				</div>
+				<!--subject 4-->
+				<div class="card" style="width: 270px; height: 170px;">
+  					<div class="strech-content-column-right">
+						<div style="height: 80px;">
+    						<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Languages, Automata and Computation</h5>
+    						<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CSCSN-ISA-ELAC]</p>
+						</div>
+					<a><button style="margin-top: 24px; background-color: #949AD6; color: white; border: thin; border-radius: 4px; padding: 4px 8px;">Dodaj pracę</button></a>
+  					</div>
+				</div>
+			</div>
+			<!--row 2-->
+			<div class="autolayout-row-left" style="gap: 24px;">
+				<!--subject 1-->
+				<div class="card" style="width: 270px; height: 170px;">
+  					<div class="strech-content-column-right">
+						<div style="height: 80px;">
+    						<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Computer Architecture</h5>
+    						<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CTxxx-ISA-ECOAR]</p>
+						</div>
+					<a><button style="margin-top: 24px; background-color: #949AD6; color: white; border: thin; border-radius: 4px; padding: 4px 8px;">Dodaj pracę</button></a>
+					</div>
+				</div>
+				<!--subject 2-->
+				<div class="card" style="width: 270px; height: 170px;">
+  					<div class="strech-content-column-right">
+						<div style="height: 80px;">
+    						<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Computer Architecture</h5>
+    						<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CTxxx-ISA-ECOAR]</p>
+						</div>
+					<a><button style="margin-top: 24px; background-color: #949AD6; color: white; border: thin; border-radius: 4px; padding: 4px 8px;">Dodaj pracę</button></a>
+					</div>
+				</div>
+				<!--gap subjects 3&4-->
+				<div class="card" style="width: 270px; height: 170px; background-color: white; border: thin"></div>
+				<div class="card" style="width: 270px; height: 170px; background-color: white; border: thin"></div>
+			</div>
+		</div>	
+	<!--box for label and catalogs for 21/22 summer-->
+	<div class="autolayout-column-left" style="padding: 40px 10% 24px 10%; gap: 16px;">
+			<!--box for label-->
+			<div class="autolayout-row-left" style="align-self: stretch">
+				<a><h2 class="header-main" style="width: 800px;">Rok akademicki 2021/2022 - semestr letni</h2></a>
+			</div>
+			<div class="autolayout-row-left" style="gap: 24px;">
+				<!--subject 1-->
+				<div class="card" style="width: 270px; height: 170px;">
+  					<div class="strech-content-column-right">
+						<div style="height: 80px;">
+    						<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Computer Architecture</h5>
+    						<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CTxxx-ISA-ECOAR]</p>
+						</div>
+					</div>
+				</div>
+				<!--subject 2-->
+				<div class="card" style="width: 270px; height: 170px;">
+  					<div class="strech-content-column-right">
+						<div style="height: 80px;">
+    						<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Cryptography and Information Security</h5>
+		    				<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CSCSN-ISA-ECRYP]</p>
+						</div>
+  					</div>
+				</div>
+				<!--subject 3-->
+				<div class="card" style="width: 270px; height: 170px;">
+  					<div class="strech-content-column-right">
+						<div style="height: 80px;">
+    						<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Languages, Automata and Computation</h5>
+    						<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CSCSN-ISA-ELAC]</p>
+						</div>
+  					</div>
+				</div>
+				<!--subject 4-->
+				<div class="card" style="width: 270px; height: 170px;">
+  					<div class="strech-content-column-right">
+						<div style="height: 80px;">
+    						<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Languages, Automata and Computation</h5>
+    						<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CSCSN-ISA-ELAC]</p>
+						</div>
+  					</div>
+				</div>
+			</div>
+			<!--row 2-->
+			<div class="autolayout-row-left" style="gap: 24px;">
+				<!--subject 1-->
+				<div class="card" style="width: 270px; height: 170px;">
+  					<div class="strech-content-column-right">
+						<div style="height: 80px;">
+    						<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Computer Architecture</h5>
+    						<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CTxxx-ISA-ECOAR]</p>
+						</div>
+					</div>
+				</div>
+				<!--subject 2-->
+				<div class="card" style="width: 270px; height: 170px;">
+  					<div class="strech-content-column-right">
+						<div style="height: 80px;">
+    						<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Computer Architecture</h5>
+    						<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CTxxx-ISA-ECOAR]</p>
+						</div>
+					</div>
+				</div>
+				<!--subject 3-->
+				<div class="card" style="width: 270px; height: 170px;">
+  					<div class="strech-content-column-right">
+						<div style="height: 80px;">
+    						<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Computer Architecture</h5>
+    						<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CTxxx-ISA-ECOAR]</p>
+						</div>
+					</div>
+				</div>
+				<!--gap subjects 4-->
+				<div class="card" style="width: 270px; height: 170px; background-color: white; border: thin"></div>
+			</div>
+		</div>
+	<!--box for label and catalogs for 21/22 winter-->
+	<div class="autolayout-column-left" style="padding: 40px 10% 24px 10%; gap: 16px;">
+			<!--box for label-->
+			<div class="autolayout-row-left" style="align-self: stretch">
+				<a><h2 class="header-main" style="width: 800px;">Rok akademicki 2021/2022 - semestr zimowy</h2></a>
+			</div>
+			<div class="autolayout-row-left" style="gap: 24px;">
+				<!--subject 1-->
+				<div class="card" style="width: 270px; height: 170px;">
+  					<div class="strech-content-column-right">
+						<div style="height: 80px;">
+    						<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Computer Architecture</h5>
+    						<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CTxxx-ISA-ECOAR]</p>
+						</div>
+					</div>
+				</div>
+				<!--subject 2-->
+				<div class="card" style="width: 270px; height: 170px;">
+  					<div class="strech-content-column-right">
+						<div style="height: 80px;">
+    						<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Cryptography and Information Security</h5>
+		    				<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CSCSN-ISA-ECRYP]</p>
+						</div>
+  					</div>
+				</div>
+				<!--subject 3-->
+				<div class="card" style="width: 270px; height: 170px;">
+  					<div class="strech-content-column-right">
+						<div style="height: 80px;">
+    						<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Languages, Automata and Computation</h5>
+    						<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CSCSN-ISA-ELAC]</p>
+						</div>
+  					</div>
+				</div>
+				<!--subject 4-->
+				<div class="card" style="width: 270px; height: 170px;">
+  					<div class="strech-content-column-right">
+						<div style="height: 80px;">
+    						<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Languages, Automata and Computation</h5>
+    						<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CSCSN-ISA-ELAC]</p>
+						</div>
+  					</div>
+				</div>
+			</div>
+			<!--row 2-->
+			<div class="autolayout-row-left" style="gap: 24px;">
+				<!--subject 1-->
+				<div class="card" style="width: 270px; height: 170px;">
+  					<div class="strech-content-column-right">
+						<div style="height: 80px;">
+    						<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Computer Architecture</h5>
+    						<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CTxxx-ISA-ECOAR]</p>
+						</div>
+					</div>
+				</div>
+				<!--subject 2-->
+				<div class="card" style="width: 270px; height: 170px;">
+  					<div class="strech-content-column-right">
+						<div style="height: 80px;">
+    						<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Computer Architecture</h5>
+    						<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CTxxx-ISA-ECOAR]</p>
+						</div>
+					</div>
+				</div>
+				<!--subject 3-->
+				<div class="card" style="width: 270px; height: 170px;">
+  					<div class="strech-content-column-right">
+						<div style="height: 80px;">
+    						<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Computer Architecture</h5>
+    						<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CTxxx-ISA-ECOAR]</p>
+						</div>
+					</div>
+				</div>
+				<!--gap subjects 4-->
+				<div class="card" style="width: 270px; height: 170px; background-color: white; border: thin"></div>
+			</div>
+		</div>
+	<div style="align-self: stretch; padding: 0px 10%;"> <button class="b-secondary-deafult">Załaduj więcej</button></div>
+	<!--footer-->
+	<footer class="frame1" style="margin-top: 80px;">
+		<div id="footer-box">
+			<div class="autolayout-column-right" style="width: 200px;">
+				<img src="logo.png" alt="logo ARPAS" style="width: 132px; height: 48px;">
+				<div class="autolayout-column-right" style="gap: 8px;">
+				<h5 style="font-weight: 600; font-size: 14px; line-height: 16px;">Pomoc techniczna:</h5>
+				<div>
+					<img src="icons/mail.svg" alt="e-mail address" style="width: 16px; height: 16px;">
+					<a style="font-weight: 400; font-size: 14px; line-height: 16px;">arpas_pomoc@uwb.edu.pl</a>
+				</div>
+				<div>
+					<img src="icons/external-link.svg" alt="external link to ARPAS support website" style="width: 16px; height: 16px;">
+					<a style="font-weight: 400; font-size: 14px; line-height: 16px;">pomoc.arpas.pl</a>
+				</div>
+				<select class="form-select" aria-label="Default select example" style="margin-top: 24px; width: 180px; height: 43px; background-color:#EDEEF2; border: 1px solid #000000; border-radius: 4px;">
+  					<option value="PL">🇵🇱 Polski</option>
+  					<option value="EN">🇬🇧 English</option>
+				</select>
+				</div>
+			</div>
+			<div class="autolayout-column-right" style="gap: 16px; width: 420px">
+				<div class="autolayout-row-right" style="gap: 8 px;">
+					<img src="uwb.png" alt="logo wydziału ekonomiczno-informatycznego w Wilnie uniwersytetu w Białymstoku" style="width: 48px; height: 48px;">
+					<h5>Wydział Ekonomiczno-Informatyczny w Wilnie Uniwersytetu w Białymstoku</h5>
+				</div>
+				<div>
+					<img src="icons/map-pin.svg" alt="localization" style="width: 16px; height: 16px;">
+					<a style="font-weight: 400; font-size: 14px; line-height: 16px;">ul. Kalvarijų 143, LT-08221 Wilno</a>
+				</div>
+				<div>
+					<img src="icons/phone.svg" alt="phone number" style="width: 16px; height: 16px;">
+					<a style="font-weight: 400; font-size: 14px; line-height: 16px;">0037052766739</a>
+				</div>
+				<div>
+					<img src="icons/mail.svg" alt="e-mail address" style="width: 16px; height: 16px;">
+					<a style="font-weight: 400; font-size: 14px; line-height: 16px;">dziekanatwilno@uwb.edu.pl</a>
+				</div>
+			</div>
+		</div>
+		<div class="copyrights autolayout-column-center">
+			<a>© 2022 Copyright all rights reserved</a>
+		</div>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="js/datatables-simple-demo.js"></script>
+</body>
+	
+</html>

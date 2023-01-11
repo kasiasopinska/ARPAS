@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	  
+	<link href="css/styleguide.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title class="text-center">ARPAS</title>
+  </head>
+	<body class="body-screen" style="background-color: white;">
+	<!--navigation-->
+	<div style="height: 160px;">
+    	<nav class="navbar nav-autolayout" id="nav-box" style="height: 160px;">
+		<!--#1 row-->	
+        <div class="strech-content-row" style="align-self: stretch; height: 60px">
+			<div class="autolayout-row-center">
+				<img src="logo.png" alt="logo ARPAS">
+				<form>
+    				<input class="nav-search" type="search" placeholder="Search" aria-label="Search">
+  				</form>
+			</div>
+			<div class="autolayout-row-center">
+				<div class="dropdown">
+  					<button onclick="myFunction()" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" style="background-color: #FFFFFF; color: black; border: thin"><img src="icons/user.svg" style="height: 16px; margin-right: 8px; align-self: center">Moje konto</button>
+ 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    					<a class="dropdown-item" href="#">Ustawienia</a>
+    					<a class="dropdown-item" href="#">Moj profil</a>
+						<div class="dropdown-divider"></div>
+    					<a class="dropdown-item" href="#">Wyloguj</a>
+  					</div>
+				</div>
+			</div>
+		</div>
+		<!--#2 row-->
+		<div class="strech-content-row" style="align-self: stretch;">
+			<div class="autolayout-row-center" style="align-self: stretch; gap: 40px;">
+				<a href="dashboard.html" style="text-decoration: none; color: black;">Dashboard</a>
+				<a href="Katalogi.html" style="text-decoration: none; color: black;">Katalogi</a>
+				<a href="Prace_Student.html" style="font-weight: 600; font-size: 16px; line-height: 17px; text-decoration: none; color: black">Aktualne prace</a>
+				<a href="Katalogi.html" style="text-decoration: none; color: black;">Archiwum prac</a>
+			</div>
+			<!--adding work hidden in teachers view-->
+			<!--<button class="b-primary-deafult" style="color: white"><img src="icons/plus.svg">Dodaj nową pracę</button>-->
+		</div>
+	</nav>
+	</div>
+	<!--all works-->
+	<div style="padding: 0px 10%;">
+		<!--Aktualne prace-->
+		<!--label-->
+		<div class="strech-content-row" style="align-self: stretch; margin-top: 40px;">
+			<div class="autolayout-column-left">
+			<a><h2 class="header-main" style="width: 800px;">Aktualne prace</h2></a>
+			<h6 style="font-weight: 400; color: #2F2F2F;">Rok akademicki 2022/2023 - semestr zimowy</h6>
+			</div>
+		</div>
+		<!--search & filters-->
+		<div class="strech-content-row" style="align-self: stretch; margin-top: 24px;">
+			<div class="autolayout-row-left" style="gap: 4px;">
+				<form>
+    				<input class="search-small" type="search" placeholder="Nazwa pracy, nazwa przedmiotu..." aria-label="Search">
+  				</form>
+				<button type="button" style="height: 42px; width: 80px; background-color: #949AD6; color: white; border: thin; border-radius: 4px;">Szukaj</button>
+			</div>
+			<div class="autolayout-row-right" style="align-self: stretch; gap: 8px; height: 42px;">
+				<h6 style="font-size: 16px; font-weight: 400; margin-top: 8px;">Sortuj</h6>
+				<select class="form-select" style="height: 42px; width: 104;  border: 1px solid #949AD6; font-size: 14px;">
+  					<option selected>Data dodania: od najnowszej</option>
+					<option value="1">Data dodania: od najstarszej</option>
+					<option value="2">Tytuł pracy: alfabetycznie rosnąco</option>
+  					<option value="3">Tytuł pracy: alfabetycznie malejąco</option>
+  					<option value="4">Przedmiot: alfabetycznie rosnąco</option>
+  					<option value="5">Przedmiot: alfabetycznie malejąco</option>
+					<option value="6">Nazwisko studenta: alfabetycznie rosnąco</option>
+  					<option value="7">Nazwisko studenta: alfabetycznie malejąco</option>
+					<option value="8">Ocena: od najniższej</option>
+					<option value="9">Ocena: od najwyższej</option>
+				</select>
+				<button class="b-secondary-deafult"><img src="icons/filter.svg" style="width: 16px; height: 16px;">Filtruj</button>
+			</div>
+		</div>
+		<!--table with works-->
+		<table class="table" style="margin-top: 24px;">
+			<!--table headings-->
+  			<thead>
+  				<tr>
+      				<th scope="col" style="width: 30%;">Tytuł pracy</th>
+      				<th scope="col" style="width: 25%;">Przedmiot</th>
+					<th scope="col" style="width: 20%;">Nazwisko i imię studenta</th>
+      				<th scope="col" style="width: 10%;">Ocena</th>
+					<th scope="col" style="width: 10%;">Data dodania pracy</th>
+					<th scope="col" style="width: 5%;"></th>
+    			</tr>
+  			</thead>
+			<!--table rows-->
+  			<tbody>
+				<!--row 1-->
+    			<tr>
+      				<td>Raport z laboratorium nr5</td>
+      				<td>Digital Circuits [EDC]</td>
+					<td>Digital Circuits [EDC]</td>
+     				<td>5/10</td>
+					<td>3.01.2023</td>
+					<td style="width: 64px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+    			</tr>
+				<!--row 2-->
+    			<tr>
+      				<td>Dokumentacja do projektu końcowego</td>
+      				<td>Microprocessor Systems [EMISY]</td>
+					<td>Digital Circuits [EDC]</td>
+     	 			<td>13/15</td>
+					<td>2.01.2023</td>
+					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+    			</tr>
+				<!--row 3-->
+    			<tr>
+      				<td>Raport z laboratorium nr4</td>
+					<td>Digital Circuits [EDC]</td>
+					<td>Digital Circuits [EDC]</td>
+      				<td>7/10</td>
+					<td>22.12.2022</td>
+					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+    			</tr>
+				<!--row 4-->
+    			<tr>
+      				<td>Rozwiązanie ćwiczeń Sopińska</td>
+					<td>Languages, Automata and Computation [ELAC]</td>
+					<td>Digital Circuits [EDC]</td>
+      				<td>8/8</td>
+					<td>10.12.2022</td>
+					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+    			</tr>
+				<!--row 5-->
+    			<tr>
+      				<td>Raport_grupa3</td>
+					<td>Electronics [EELE1]</td>
+					<td>Digital Circuits [EDC]</td>
+      				<td><button class="b-primary-deafult" style="padding: 4px 12px; color: white">Oceń</button></td>
+					<td>3.12.2022</td>
+					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+    			</tr>
+				<!--row 6-->
+    			<tr>
+      				<td>Raport laboratorium nr3</td>
+					<td>Digital Circuits [EDC]</td>
+					<td>Digital Circuits [EDC]</td>
+      				<td>8/10</td>
+					<td>3.12.2022</td>
+					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+    			</tr>
+				<!--row 7-->
+    			<tr>
+      				<td>Sopińska rozwiązanie ćwiczeń</td>
+					<td>Languages, Automata and Computation [ELAC]</td>
+					<td>Digital Circuits [EDC]</td>
+      				<td>9/9</td>
+					<td>22.11.2022</td>
+					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+    			</tr>
+  			</tbody>
+		</table>
+	</div>
+	<!--footer-->
+	<footer class="frame1" style="margin-top: 80px;">
+		<div id="footer-box">
+			<div class="autolayout-column-right" style="width: 200px;">
+				<img src="logo.png" alt="logo ARPAS" style="width: 132px; height: 48px;">
+				<div class="autolayout-column-right" style="gap: 8px;">
+				<h5 style="font-weight: 600; font-size: 14px; line-height: 16px;">Pomoc techniczna:</h5>
+				<div>
+					<img src="icons/mail.svg" alt="e-mail address" style="width: 16px; height: 16px;">
+					<a style="font-weight: 400; font-size: 14px; line-height: 16px;">arpas_pomoc@uwb.edu.pl</a>
+				</div>
+				<div>
+					<img src="icons/external-link.svg" alt="external link to ARPAS support website" style="width: 16px; height: 16px;">
+					<a style="font-weight: 400; font-size: 14px; line-height: 16px;">pomoc.arpas.pl</a>
+				</div>
+				<select class="form-select" aria-label="Default select example" style="margin-top: 24px; width: 180px; height: 43px; background-color:#EDEEF2; border: 1px solid #000000; border-radius: 4px;">
+  					<option value="PL">🇵🇱 Polski</option>
+  					<option value="EN">🇬🇧 English</option>
+				</select>
+				</div>
+			</div>
+			<div class="autolayout-column-right" style="gap: 16px; width: 420px">
+				<div class="autolayout-row-right" style="gap: 8 px;">
+					<img src="uwb.png" alt="logo wydziału ekonomiczno-informatycznego w Wilnie uniwersytetu w Białymstoku" style="width: 48px; height: 48px;">
+					<h5>Wydział Ekonomiczno-Informatyczny w Wilnie Uniwersytetu w Białymstoku</h5>
+				</div>
+				<div>
+					<img src="icons/map-pin.svg" alt="localization" style="width: 16px; height: 16px;">
+					<a style="font-weight: 400; font-size: 14px; line-height: 16px;">ul. Kalvarijų 143, LT-08221 Wilno</a>
+				</div>
+				<div>
+					<img src="icons/phone.svg" alt="phone number" style="width: 16px; height: 16px;">
+					<a style="font-weight: 400; font-size: 14px; line-height: 16px;">0037052766739</a>
+				</div>
+				<div>
+					<img src="icons/mail.svg" alt="e-mail address" style="width: 16px; height: 16px;">
+					<a style="font-weight: 400; font-size: 14px; line-height: 16px;">dziekanatwilno@uwb.edu.pl</a>
+				</div>
+			</div>
+		</div>
+		<div class="copyrights autolayout-column-center">
+			<a>© 2022 Copyright all rights reserved</a>
+		</div>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="js/datatables-simple-demo.js"></script>
+</body>
+	
+</html>
