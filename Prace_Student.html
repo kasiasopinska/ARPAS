@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	  
 	<link href="css/styleguide.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
@@ -40,7 +41,6 @@
 				<a href="dashboard.html" style="text-decoration: none; color: black;">Dashboard</a>
 				<a href="Katalogi.html" style="text-decoration: none; color: black;">Moje katalogi</a>
 				<a href="Prace_Student.html" style="font-weight: 600; font-size: 16px; line-height: 17px; text-decoration: none; color: black">Moje prace</a>
-				<a>Moje oceny</a>
 			</div>
 			<button class="b-primary-deafult" style="color: white"><img src="icons/plus.svg">Dodaj nową pracę</button>
 		</div>
@@ -76,82 +76,168 @@
 					<option value="6">Ocena: od najniższej</option>
 					<option value="7">Ocena: od najwyższej</option>
 				</select>
-				<button class="b-secondary-deafult"><img src="icons/filter.svg" style="width: 16px; height: 16px;">Filtruj</button>
+				<button class="b-ghost-deafult"><img src="icons/filter.svg" style="width: 16px; height: 16px;">Filtruj</button>
 			</div>
 		</div>
 		<!--table with works-->
-		<table class="table" style="margin-top: 24px;">
+		<table class="table" style="margin-top: 24px;" id="myTable">
 			<!--table headings-->
-  			<thead>
   				<tr>
-      				<th scope="col" style="width: 30%;">Tytuł pracy</th>
-      				<th scope="col" style="width: 25%;">Przedmiot</th>
-      				<th scope="col" style="width: 20%;">Ocena</th>
-					<th scope="col" style="width: 20%;">Data dodania pracy</th>
+					<th scope="col" style="width: 20%;" onclick="sortTable(0)"><img  id="icon-date" src="icons/sort_descending_line.svg" style="height: 20px; margin-bottom: 4px;">Data dodania</th>
+      				<th scope="col" style="width: 30%;" onclick="sortTable(1)"><img id="icon-title" src="icons/AZ_sort_ascending_letters_line.svg" style="height: 20px; margin-bottom: 4px;">Tytuł pracy</th>
+      				<th scope="col" style="width: 25%;" onclick="sortTable(2)"><img id="icon-subject" src="icons/AZ_sort_ascending_letters_line.svg" style="height: 20px; margin-bottom: 4px;">Przedmiot</th>
+      				<th scope="col" style="width: 20%;" onclick="sortTable(3)">Ocena</th>
 					<th scope="col" style="width: 5%;"></th>
     			</tr>
-  			</thead>
-			<!--table rows-->
-  			<tbody>
 				<!--row 1-->
     			<tr>
+					<td>3.01.2023</td>
       				<td>Raport z laboratorium nr5</td>
       				<td>Digital Circuits [EDC]</td>
      				<td>5/10</td>
-					<td>3.01.2023</td>
 					<td style="width: 64px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 				<!--row 2-->
     			<tr>
+					<td>2.01.2023</td>
       				<td>Dokumentacja do projektu końcowego</td>
       				<td>Microprocessor Systems [EMISY]</td>
      	 			<td>13/15</td>
-					<td>2.01.2023</td>
 					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 				<!--row 3-->
     			<tr>
+					<td>22.12.2022</td>
       				<td>Raport z laboratorium nr4</td>
 					<td>Digital Circuits [EDC]</td>
       				<td>7/10</td>
-					<td>22.12.2022</td>
 					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 				<!--row 4-->
     			<tr>
+					<td>10.12.2022</td>
       				<td>Rozwiązanie ćwiczeń Sopińska</td>
 					<td>Languages, Automata and Computation [ELAC]</td>
       				<td>8/8</td>
-					<td>10.12.2022</td>
 					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 				<!--row 5-->
     			<tr>
+					<td>3.12.2022</td>
       				<td>Raport_grupa3</td>
 					<td>Electronics [EELE1]</td>
       				<td></td>
-					<td>3.12.2022</td>
 					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 				<!--row 6-->
     			<tr>
+					<td>3.12.2022</td>
       				<td>Raport laboratorium nr3</td>
 					<td>Digital Circuits [EDC]</td>
       				<td>8/10</td>
-					<td>3.12.2022</td>
 					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 				<!--row 7-->
     			<tr>
+					<td>22.11.2022</td>
       				<td>Sopińska rozwiązanie ćwiczeń</td>
 					<td>Languages, Automata and Computation [ELAC]</td>
       				<td>9/9</td>
-					<td>22.11.2022</td>
 					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
-  			</tbody>
 		</table>
-		
+		<!--sorting table-->
+		<script>
+				function sortTable(n) {
+				var icon_change = n;
+  				var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+				table = document.getElementById("myTable");
+  				switching = true;
+  				//Set the sorting direction to ascending:
+  				dir = "asc"; 
+  				/*Make a loop that will continue until
+  				no switching has been done:*/
+  				while (switching) {
+    			//start by saying: no switching is done:
+    			switching = false;
+    			rows = table.rows;
+    			/*Loop through all table rows (except the
+    			first, which contains table headers):*/
+    			for (i = 1; i < (rows.length - 1); i++) {
+      			//start by saying there should be no switching:
+      			shouldSwitch = false;
+      			/*Get the two elements you want to compare,
+      			one from current row and one from the next:*/
+      			x = rows[i].getElementsByTagName("TD")[n];
+      			y = rows[i + 1].getElementsByTagName("TD")[n];
+      			/*check if the two rows should switch place,
+      			based on the direction, asc or desc:*/
+      			if (dir == "asc") {
+        		if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          			//if so, mark as a switch and break the loop:
+          			shouldSwitch= true;
+					break;
+					}
+			  	} else if (dir == "desc") {
+        		if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          			//if so, mark as a switch and break the loop:
+          			shouldSwitch = true;
+          			break;
+        		}
+      			}
+    			}
+    			if (shouldSwitch) {
+			  /*If a switch has been marked, make the switch
+			  and mark that a switch has been done:*/
+			  rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+			  switching = true;
+			  //Each time a switch is done, increase this count by 1:
+			  switchcount ++;      
+			} else {
+			  /*If no switching has been done AND the direction is "asc",
+			  set the direction to "desc" and run the while loop again.*/
+			  if (switchcount == 0 && dir == "asc") {
+				dir = "desc";
+				switching = true;
+			  }
+			}
+		  }
+				if(icon_change == 0)
+				{
+					let disp_image = document.getElementById("icon-date")
+					if(disp_image.src.match("icons/sort_descending_line.svg")){
+					disp_image.src ="icons/sort_ascending_line.svg"
+					}
+					else{
+						disp_image.src ="icons/sort_descending_line.svg"
+					}
+				}
+				else if(icon_change == 1)
+				{
+					let disp_image = document.getElementById("icon-title")
+					document.getElementById("icon-date").style.display = "none"
+					document.getElementById("icon-subject").style.display = "none"
+					if(disp_image.src.match("icons/AZ_sort_ascending_letters_line.svg")){
+						disp_image.src = "icons/ZA_sort_descending_letters_line.svg"
+					}
+					else{
+						disp_image.src = "icons/AZ_sort_ascending_letters_line.svg"
+					}
+				}
+				else if(icon_change ==2){
+					let disp_image = document.getElementById("icon-title")
+					document.getElementById("icon-date").style.display = "none"
+					document.getElementById("icon-title").style.display = "none"
+					if(disp_image.src.match("icons/AZ_sort_ascending_letters_line.svg")){
+						disp_image.src = "icons/ZA_sort_descending_letters_line.svg"
+					}
+					else{
+						disp_image.src = "icons/AZ_sort_ascending_letters_line.svg"
+					}
+				}
+					
+				}
+		</script>
 		<!--Stare prace 1-->
 		<!--label-->
 		<div class="strech-content-row" style="align-self: stretch; margin-top: 80px;">
@@ -180,7 +266,7 @@
 					<option value="6">Ocena: od najniższej</option>
 					<option value="7">Ocena: od najwyższej</option>
 				</select>
-				<button class="b-secondary-deafult"><img src="icons/filter.svg" style="width: 16px; height: 16px;">Filtruj</button>
+				<button class="b-ghost-deafult"><img src="icons/filter.svg" style="width: 16px; height: 16px;">Filtruj</button>
 			</div>
 		</div>
 		<!--table with works-->
@@ -239,7 +325,7 @@
     			</tr>
   			</tbody>
 		</table>
-		<div class="autolayout-row-left" style="align-self: stretch;"><a href="Wiecej_prac1.html" style="text-decoration: none;"><button class="b-secondary-deafult">Pokaż więcej</button></a></div>
+		<div class="autolayout-row-left" style="align-self: stretch;"><a href="Wiecej_prac1.html" style="text-decoration: none;"><button class="b-ghost-deafult">Pokaż więcej</button></a></div>
 		
 		<!--Stare prace 2-->
 		<!--label-->
@@ -268,7 +354,7 @@
 					<option value="6">Ocena: od najniższej</option>
 					<option value="7">Ocena: od najwyższej</option>
 				</select>
-				<button class="b-secondary-deafult"><img src="icons/filter.svg" style="width: 16px; height: 16px;">Filtruj</button>
+				<button class="b-ghost-deafult"><img src="icons/filter.svg" style="width: 16px; height: 16px;">Filtruj</button>
 			</div>
 		</div>
 		<!--table with works-->
@@ -327,7 +413,7 @@
     			</tr>
   			</tbody>
 		</table>
-		<div class="autolayout-row-left" style="align-self: stretch;"><button class="b-secondary-deafult">Pokaż więcej</button></div>
+		<div class="autolayout-row-left" style="align-self: stretch;"><button class="b-ghost-deafult">Pokaż więcej</button></div>
 	</div>
 	<!--footer-->
 	<footer class="frame1" style="margin-top: 80px;">

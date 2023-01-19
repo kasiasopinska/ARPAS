@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	  
+	<link href="css/styleguide.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title class="text-center">ARPAS</title>
+  </head>
+	<body class="body-screen" style="background-color: white;">
+	<!--navigation-->
+	<div style="height: 160px;">
+    	<nav class="navbar nav-autolayout" id="nav-box" style="height: 160px;">
+		<!--#1 row-->	
+        <div class="strech-content-row" style="align-self: stretch; height: 60px">
+			<div class="autolayout-row-center">
+				<img src="logo.png" alt="logo ARPAS">
+				<form>
+    				<input class="nav-search" type="search" placeholder="Search" aria-label="Search">
+  				</form>
+			</div>
+			<div class="autolayout-row-center">
+				<div class="dropdown">
+  					<button onclick="myFunction()" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" style="background-color: #FFFFFF; color: black; border: thin"><img src="icons/user.svg" style="height: 16px; margin-right: 8px; align-self: center">Moje konto</button>
+ 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    					<a class="dropdown-item" href="#">Ustawienia</a>
+    					<a class="dropdown-item" href="#">Moj profil</a>
+						<div class="dropdown-divider"></div>
+    					<a class="dropdown-item" href="#">Wyloguj</a>
+  					</div>
+				</div>
+			</div>
+		</div>
+		<!--#2 row-->
+		<div class="strech-content-row" style="align-self: stretch;">
+			<div class="autolayout-row-center" style="align-self: stretch; gap: 40px;">
+				<a href="dashboard.html" class="nav-default">Dashboard</a>
+				<a href="Katalogi.html" class="nav-default">Moje katalogi</a>
+				<a href="Prace_Student.html" class="nav-default">Moje prace</a>
+			</div>
+			<button class="b-primary-deafult" style="color: white"><img src="icons/plus.svg">Dodaj nową pracę</button>
+		</div>
+	</nav>
+	</div>
+	<!--back button-->
+	<div style="padding: 0px 10%; margin-top: 40px;">
+		<a class="link-button"><img src="icons/chevron-left.svg" style="color: #4253AF; height: 20px; padding-bottom: 4px;">Wróć</a>
+	</div>
+	<!--form-->
+	<div style="padding: 0px 10%; margin-top: 24px; align-self: stretch;" class="autolayout-row-left">
+		<!--space to upload work-->
+		<div style="width: 50%; padding-right: 2%;">
+			<div class="upload-space">
+				<input type="file" name="some_file" class="upload_input">
+				<div class="miniature" data-label="example.pdf"><img src="./przykładowa_praca.jpg" style="max-width: 100%; max-height: 100%;"></div>
+			</div>
+		</div>
+		<!--inputs for details-->
+		<div style="width: 50%; padding-left: 2%;">
+			<!--Name-->
+			<div style="margin-top:" class="autolayout-column-left">
+				<label style="margin-bottom: 4px;">Nazwa pracy</label>
+				<input class="input-m" placeholder="Praca domowa nr 4 Sopińska" disabled>
+			</div>
+			<!--Catalog-->
+			<div style="margin-top: 24px;" class="autolayout-column-left">
+				<label style="margin-bottom: 4px;">Katalog</label>
+				<input class="input-m" placeholder="EDABA/2022Z/ćwieczenia" disabled>
+			</div>
+			<!--Type-->
+			<div style="margin-top: 24px;" class="autolayout-column-left">
+				<label style="margin-bottom: 4px;">Rodzaj pracy</label>
+				<input class="input-m" placeholder="Praca domowa" disabled>
+			</div>
+			<!--Student description-->
+			<div style="margin-top: 24px;" class="autolayout-column-left">
+				<label style="margin-bottom: 4px;">Dodatkowy opis</label>
+				<textarea class="input-m" id="exampleFormControlTextarea1" style="height: 120px;" disabled></textarea>
+			</div>
+			<!--File name-->
+			<div style="margin-top: 24px;" class="autolayout-column-left">
+				<label style="margin-bottom: 4px;">Nazwa pliku</label>
+				<input class="input-m" placeholder="EDABA_Pracadomowa4_Sopińska.pdf" disabled>
+			</div>
+			<!--Date-->
+			<div style="margin-top: 24px;" class="autolayout-column-left">
+				<label style="margin-bottom: 4px;">Data dodania</label>
+				<input class="input-m" placeholder="12-01-2023" disabled>
+			</div>
+			<!--Grade-->
+			<div style="margin-top: 24px;" class="autolayout-column-left">
+				<label style="margin-bottom: 4px;">Ocena</label>
+				<input class="input-m" disabled>
+			</div>
+			<!--Teachers description-->
+			<div style="margin-top: 24px;" class="autolayout-column-left">
+				<label style="margin-bottom: 4px;">Komentarz od nauczyciela</label>
+				<textarea class="input-m" id="exampleFormControlTextarea2" style="height: 120px;" disabled></textarea>
+			</div>
+			<!--button download-->
+			<button class="b-ghost-deafult" style="margin-top: 24px; width: 100%;"><img src="./icons/download.svg" style="height: 16px;">Pobierz pracę</button>
+		</div>
+	</div>
+		<!--footer-->
+	<footer class="frame1" style="margin-top: 120px;">
+		<div id="footer-box">
+			<div class="autolayout-column-right" style="width: 200px;">
+				<img src="logo.png" alt="logo ARPAS" style="width: 132px; height: 48px;">
+				<div class="autolayout-column-right" style="gap: 8px;">
+				<h5 style="font-weight: 600; font-size: 14px; line-height: 16px;">Pomoc techniczna:</h5>
+				<div>
+					<img src="icons/mail.svg" alt="e-mail address" style="width: 16px; height: 16px;">
+					<a style="font-weight: 400; font-size: 14px; line-height: 16px;">arpas_pomoc@uwb.edu.pl</a>
+				</div>
+				<div>
+					<img src="icons/external-link.svg" alt="external link to ARPAS support website" style="width: 16px; height: 16px;">
+					<a style="font-weight: 400; font-size: 14px; line-height: 16px;">pomoc.arpas.pl</a>
+				</div>
+				<select class="form-select" aria-label="Default select example" style="margin-top: 24px; width: 180px; height: 43px; background-color:#EDEEF2; border: 1px solid #000000; border-radius: 4px;">
+  					<option value="PL">🇵🇱 Polski</option>
+  					<option value="EN">🇬🇧 English</option>
+				</select>
+				</div>
+			</div>
+			<div class="autolayout-column-right" style="gap: 16px; width: 420px">
+				<div class="autolayout-row-right" style="gap: 8 px;">
+					<img src="uwb.png" alt="logo wydziału ekonomiczno-informatycznego w Wilnie uniwersytetu w Białymstoku" style="width: 48px; height: 48px;">
+					<h5>Wydział Ekonomiczno-Informatyczny w Wilnie Uniwersytetu w Białymstoku</h5>
+				</div>
+				<div>
+					<img src="icons/map-pin.svg" alt="localization" style="width: 16px; height: 16px;">
+					<a style="font-weight: 400; font-size: 14px; line-height: 16px;">ul. Kalvarijų 143, LT-08221 Wilno</a>
+				</div>
+				<div>
+					<img src="icons/phone.svg" alt="phone number" style="width: 16px; height: 16px;">
+					<a style="font-weight: 400; font-size: 14px; line-height: 16px;">0037052766739</a>
+				</div>
+				<div>
+					<img src="icons/mail.svg" alt="e-mail address" style="width: 16px; height: 16px;">
+					<a style="font-weight: 400; font-size: 14px; line-height: 16px;">dziekanatwilno@uwb.edu.pl</a>
+				</div>
+			</div>
+		</div>
+		<div class="copyrights autolayout-column-center">
+			<a>© 2022 Copyright all rights reserved</a>
+		</div>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="js/datatables-simple-demo.js"></script>
+</body>
+	
+</html>
