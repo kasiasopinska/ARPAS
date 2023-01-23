@@ -7,6 +7,7 @@
 	<link href="css/styleguide.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="js/scripts.js"></script>
     
     <title class="text-center">ARPAS</title>
   </head>
@@ -21,31 +22,59 @@
 		<h4 class="log-label" style="color: #F5F5F5;">Logowanie</h4>
 		<!-- Login autolayout-->
 		<div style="align-self: stretch;">
+		<!--Username-->
 		<div class="autolayout-log" style="margin-bottom: 24px;">
 			<!-- Label -->
 			<h6 class="input-label">Nazwa użytkownika/PESEL</h6>
 			<!-- Input -->
-  			<input class="input-field logowanie">
+			<div class="logowanie strech-content-row">
+			<img src="./icons/user_gray.svg" alt="Wpisz nazwę użytkownika lub PESEL">
+  			<input class="input-field" id="username" style="height: inherit; width: 600px; background-color: transparent; border: 0px;">
+			</div>
 		</div>
 		<!-- Password autolayout-->
 		<div class="autolayout-log">
 			<!-- Label -->
-		  <h6 class="input-label">Hasło</h6>
+		  	<h6 class="input-label">Hasło</h6>
 			<!-- Input -->
-		  <input class="input-field logowanie">
-	  </div>
-	</div>
-	<div style="align-self: stretch; display: flex; flex-direction: column; align-items: center; gap: 16px;">
-	  <div style="align-items: center;">
-		 <a href="dashboard.html">
-			<button class="b-primary-deafult">
-			<h5 class="button-label" type="button" style="text-decoration: none">Zaloguj się</h5>
-			 </button>
-		</a>
+			<div class="logowanie strech-content-row">
+			<img src="./icons/lock_gray.svg" alt="Wpisz hasło">
+		  	<input type="password" id="password" style="height: inherit; width: 600px; background-color: transparent; border: 0px;">
+			<button type="button" style="background-color: transparent; border: 0px;" id="button-show-password" onClick="show_hide_password()">
+				<img src="./icons/eye.svg" id="icon_show_hide_password" alt="Pokaż/ukryj hasło">
+			</button>
+			</div>	
 		</div>
-		<a href="https://www.google.com/" style="text-decoration-line: underline; color: #000000;">Nie pamiętasz swojego hasła?</a>
+	 	</div>
+		<!--buttons-->
+		<div style="align-self: stretch; display: flex; flex-direction: column; align-items: center; gap: 16px;">
+	  	<div style="align-items: center;">
+			<button class="b-primary-deafult" onClick="logIn()">
+			<h5 class="button-label" type="button" style="text-decoration: none; margin-top: 8px;">Zaloguj się</h5>
+			</button>
+		</div>
+		<a href="https://www.google.com/" style="text-decoration-line: underline; color: #000000;" data-bs-toggle="modal" data-bs-target="#modal_help" >Nie pamiętasz swojego hasła?</a>
 	</div>
 </div>
+	
+<!--modal-->
+<div class="modal fade" id="modal_help" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header"> 
+					<h5 class="modal-title" id="modal-title">Co zrobić w przypadku zapomnienia hasła?</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Odzyskanie hasła, może zostać wykonane wyłącznie przez administratora systamu. Skieruj swoje zapytanie na adres e-mail <a href="#">arpas_pomoc@uwb.edu.pl</a>, kierując go z maila, na którego założone jest konto.</p>
+				</div>
+				<div class="modal-footer">
+					<button class="b-primary-deafult" data-bs-dismiss="modal" aria-label="Close">OK</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 <footer class="frame1">
 	<div id="footer-box">
 		<div class="autolayout-column-right" style="width: 200px;">

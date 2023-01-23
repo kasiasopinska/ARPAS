@@ -16,21 +16,22 @@
 	<div style="height: 160px;">
     	<nav class="navbar nav-autolayout" id="nav-box" style="height: 160px;">
 		<!--#1 row-->	
-        <div class="strech-content-row" style="align-self: stretch; height: 60px">
+         <div class="strech-content-row" style="align-self: stretch; height: 60px">
 			<div class="autolayout-row-center">
+				<a href="LogIn.html">
 				<img src="logo.png" alt="logo ARPAS">
+				</a>
 				<form>
     				<input class="nav-search" type="search" placeholder="Search" aria-label="Search">
   				</form>
 			</div>
 			<div class="autolayout-row-center">
 				<div class="dropdown">
-  					<button onclick="myFunction()" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" style="background-color: #FFFFFF; color: black; border: thin"><img src="icons/user.svg" style="height: 16px; margin-right: 8px; align-self: center">Moje konto</button>
- 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    					<a class="dropdown-item" href="#">Ustawienia</a>
-    					<a class="dropdown-item" href="#">Moj profil</a>
+  					<button onclick="dropdown_action()" class="dropbtn" type="button" id="dropdown_button" data-toggle="dropdown" style="background-color: transparent; color: black; border: thin"><img src="icons/user.svg" style="height: 16px; margin-right: 8px; align-self: center">Moje konto<img src="./icons/chevron-down.svg" style="margin-left: 4px;"></button>
+ 					<div id="dropdown-menu" class="dropdown-list">
+    					<a class="dropdown-item" href="./Profil.html">Moj profil</a>
 						<div class="dropdown-divider"></div>
-    					<a class="dropdown-item" href="#">Wyloguj</a>
+    					<a class="dropdown-item" href="./LogIn.html">Wyloguj</a>
   					</div>
 				</div>
 			</div>
@@ -83,9 +84,9 @@
 		<table class="table" style="margin-top: 24px;" id="myTable">
 			<!--table headings-->
   				<tr>
-					<th scope="col" style="width: 20%;" onclick="sortTable(0)"><img  id="icon-date" src="icons/sort_descending_line.svg" style="height: 20px; margin-bottom: 4px;">Data dodania</th>
-      				<th scope="col" style="width: 30%;" onclick="sortTable(1)"><img id="icon-title" src="icons/AZ_sort_ascending_letters_line.svg" style="height: 20px; margin-bottom: 4px;">Tytuł pracy</th>
-      				<th scope="col" style="width: 25%;" onclick="sortTable(2)"><img id="icon-subject" src="icons/AZ_sort_ascending_letters_line.svg" style="height: 20px; margin-bottom: 4px;">Przedmiot</th>
+					<th scope="col" style="width: 20%;" onclick="sortTable(0)">Data dodania</th>
+      				<th scope="col" style="width: 30%;" onclick="sortTable(1)">Tytuł pracy</th>
+      				<th scope="col" style="width: 25%;" onclick="sortTable(2)">Przedmiot</th>
       				<th scope="col" style="width: 20%;" onclick="sortTable(3)">Ocena</th>
 					<th scope="col" style="width: 5%;"></th>
     			</tr>

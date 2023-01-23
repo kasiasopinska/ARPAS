@@ -15,33 +15,34 @@
 	<div style="height: 160px;">
     	<nav class="navbar nav-autolayout" id="nav-box" style="height: 160px;">
 		<!--row 1-->
-        <div class="strech-content-row" style="align-self: stretch; height: 60px">
+		<div class="strech-content-row" style="align-self: stretch; height: 60px">
 			<div class="autolayout-row-center">
+				<a href="dashboard.html">
 				<img src="logo.png" alt="logo ARPAS">
+				</a>
 				<form>
     				<input class="nav-search" type="search" placeholder="Search" aria-label="Search">
   				</form>
 			</div>
 			<div class="autolayout-row-center">
 				<div class="dropdown">
-  					<button onclick="myFunction()" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" style="background-color: #FFFFFF; color: black; border: thin"><img src="icons/user.svg" style="height: 16px; margin-right: 8px; align-self: center">Moje konto</button>
- 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    					<a class="dropdown-item" href="#">Ustawienia</a>
-    					<a class="dropdown-item" href="#">Moj profil</a>
+  					<button onclick="dropdown_action()" class="dropbtn" type="button" id="dropdown_button" data-toggle="dropdown" style="background-color: transparent; color: black; border: thin"><img src="icons/user.svg" style="height: 16px; margin-right: 8px; align-self: center">Moje konto<img src="./icons/chevron-down.svg" style="margin-left: 4px;"></button>
+ 					<div id="dropdown-menu" class="dropdown-list">
+    					<a class="dropdown-item" href="./Profil.html">Moj profil</a>
 						<div class="dropdown-divider"></div>
-    					<a class="dropdown-item" href="#">Wyloguj</a>
+    					<a class="dropdown-item" href="./LogIn.html">Wyloguj</a>
   					</div>
 				</div>
 			</div>
 		</div>
-		<!--row 2-->
+       	<!--row 2-->
 		<div class="strech-content-row" style="align-self: stretch;">
 			<div class="autolayout-row-center" style="align-self: stretch; gap: 40px;">
 				<a href="dashboard.html" style="text-decoration: none; color: black;">Dashboard</a>
 				<a href="Katalogi.html" style="font-weight: 600; font-size: 16px; line-height: 17px; text-decoration: none; color: black">Moje katalogi</a>
 				<a href="Prace_Student.html" style="text-decoration: none; color: black;">Moje prace</a>
 			</div>
-			<button class="b-primary-deafult" style="color: white"><img src="icons/plus.svg">Dodaj nową pracę</button>
+			<a href="dodanie_pracy_student.html"><button class="b-primary-deafult" style="color: white"><img src="icons/plus.svg">Dodaj nową pracę</button></a>
 		</div>
 	</nav>
 	</div>
@@ -60,7 +61,7 @@
     						<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CTxxx-ISA-ECOAR]</p>
 							<div class="badge-purple"><h6 class="badge-purple-text" style="width: 50px;">Wykład</h6></div>
 						</div>
-					<a><button style="margin-top: 24px; background-color: #949AD6; color: white; border: thin; border-radius: 4px; padding: 4px 8px;">Dodaj pracę</button></a>
+					<a href="dodanie_pracy_student.html"><button style="margin-top: 24px; background-color: #949AD6; color: white; border: thin; border-radius: 4px; padding: 4px 8px;">Dodaj pracę</button></a>
 					</div>
 				</div>
 				<!--subject 2-->
@@ -70,7 +71,7 @@
     						<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Cryptography and Information Security</h5>
 		    				<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CSCSN-ISA-ECRYP]</p>
 						</div>
-						<a><button style="margin-top: 24px; background-color: #949AD6; color: white; border: thin; border-radius: 4px; padding: 4px 8px;">Dodaj pracę</button></a>
+						<a href="dodanie_pracy_student.html"><button style="margin-top: 24px; background-color: #949AD6; color: white; border: thin; border-radius: 4px; padding: 4px 8px;">Dodaj pracę</button></a>
   					</div>
 				</div>
 				<!--subject 3-->
@@ -80,7 +81,7 @@
     						<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Languages, Automata and Computation</h5>
     						<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CSCSN-ISA-ELAC]</p>
 						</div>
-					<a><button style="margin-top: 24px; background-color: #949AD6; color: white; border: thin; border-radius: 4px; padding: 4px 8px;">Dodaj pracę</button></a>
+					<a href="dodanie_pracy_student.html"><button style="margin-top: 24px; background-color: #949AD6; color: white; border: thin; border-radius: 4px; padding: 4px 8px;">Dodaj pracę</button></a>
   					</div>
 				</div>
 				<!--subject 4-->
@@ -90,7 +91,7 @@
     						<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Languages, Automata and Computation</h5>
     						<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CSCSN-ISA-ELAC]</p>
 						</div>
-					<a><button style="margin-top: 24px; background-color: #949AD6; color: white; border: thin; border-radius: 4px; padding: 4px 8px;">Dodaj pracę</button></a>
+					<a href="dodanie_pracy_student.html"><button style="margin-top: 24px; background-color: #949AD6; color: white; border: thin; border-radius: 4px; padding: 4px 8px;">Dodaj pracę</button></a>
   					</div>
 				</div>
 			</div>
@@ -103,7 +104,7 @@
     						<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Computer Architecture</h5>
     						<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CTxxx-ISA-ECOAR]</p>
 						</div>
-					<a><button style="margin-top: 24px; background-color: #949AD6; color: white; border: thin; border-radius: 4px; padding: 4px 8px;">Dodaj pracę</button></a>
+					<a href="dodanie_pracy_student.html"><button style="margin-top: 24px; background-color: #949AD6; color: white; border: thin; border-radius: 4px; padding: 4px 8px;">Dodaj pracę</button></a>
 					</div>
 				</div>
 				<!--subject 2-->
@@ -113,7 +114,7 @@
     						<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Computer Architecture</h5>
     						<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CTxxx-ISA-ECOAR]</p>
 						</div>
-					<a><button style="margin-top: 24px; background-color: #949AD6; color: white; border: thin; border-radius: 4px; padding: 4px 8px;">Dodaj pracę</button></a>
+					<a href="dodanie_pracy_student.html"><button style="margin-top: 24px; background-color: #949AD6; color: white; border: thin; border-radius: 4px; padding: 4px 8px;">Dodaj pracę</button></a>
 					</div>
 				</div>
 				<!--gap subjects 3&4-->

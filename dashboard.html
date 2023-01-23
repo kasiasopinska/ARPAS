@@ -7,6 +7,8 @@
 	<link href="css/styleguide.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     
     <title class="text-center">ARPAS</title>
   </head>
@@ -17,7 +19,7 @@
 		<!--row 1-->
         <div class="strech-content-row" style="align-self: stretch; height: 60px">
 			<div class="autolayout-row-center">
-				<a href="LogIn.html">
+				<a href="dashboard.html">
 				<img src="logo.png" alt="logo ARPAS">
 				</a>
 				<form>
@@ -26,12 +28,11 @@
 			</div>
 			<div class="autolayout-row-center">
 				<div class="dropdown">
-  					<button onclick="myFunction()" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" style="background-color: #FFFFFF; color: black; border: thin"><img src="icons/user.svg" style="height: 16px; margin-right: 8px; align-self: center">Moje konto</button>
- 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    					<a class="dropdown-item" href="#">Ustawienia</a>
-    					<a class="dropdown-item" href="#">Moj profil</a>
+  					<button onclick="dropdown_action()" class="dropbtn" type="button" id="dropdown_button" data-toggle="dropdown" style="background-color: transparent; color: black; border: thin"><img src="icons/user.svg" style="height: 16px; margin-right: 8px; align-self: center">Moje konto<img src="./icons/chevron-down.svg" style="margin-left: 4px;"></button>
+ 					<div id="dropdown-menu" class="dropdown-list">
+    					<a class="dropdown-item" href="./Profil.html">Moj profil</a>
 						<div class="dropdown-divider"></div>
-    					<a class="dropdown-item" href="#">Wyloguj</a>
+    					<a class="dropdown-item" href="./LogIn.html">Wyloguj</a>
   					</div>
 				</div>
 			</div>
@@ -39,12 +40,11 @@
 		<!--row 2-->
 		<div class="strech-content-row" style="align-self: stretch;">
 			<div class="autolayout-row-center" style="align-self: stretch; gap: 40px;">
-				<a href="dashboard.html" style="font-weight: 600; font-size: 16px; line-height: 17px; text-decoration: none; color: black">Dashboard</a>
-				<a href="Katalogi.html" style="text-decoration: none; color: black">Moje katalogi</a>
-				<a href="Prace_Student.html" style="text-decoration: none; color: black">Moje prace</a>
-				<a>Moje oceny</a>
+				<a href="dashboard.html" class="nav-active">Dashboard</a>
+				<a href="Katalogi.html" class="nav-default">Moje katalogi</a>
+				<a href="Prace_Student.html" class="nav-default">Moje prace</a>
 			</div>
-			<button class="b-primary-deafult" style="color: white"><img src="icons/plus.svg">Dodaj nową pracę</button>
+			<a href="dodanie_pracy_student.html"><button class="b-primary-deafult" style="color: white"><img src="icons/plus.svg">Dodaj nową pracę</button></a>
 		</div>
 	</nav>
 	</div>
@@ -91,7 +91,7 @@
 			<!--box for label-->
 			<div class="strech-content-row" style="align-self: stretch">
 				<a><h2 class="header-main">Moje prace</h2></a>
-				<a class="link-button" style="width: 120px;">Zobacz wszystkie</a>
+				<a href="Prace_Student.html" class="link-button" style="width: 120px;">Zobacz wszystkie</a>
 			</div>
 			<!--box for catalogs-->
 			<div class="autolayout-row-left" style="align-self: stretch; gap: 24px;">
@@ -158,8 +158,8 @@
 			<a>© 2022 Copyright all rights reserved</a>
 		</div>
 	</footer>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+	<script src="js/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
     <script src="js/datatables-simple-demo.js"></script>
 </body>

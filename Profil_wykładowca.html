@@ -14,10 +14,10 @@
 	<!--navigation-->
 	<div style="height: 160px;">
     	<nav class="navbar nav-autolayout" id="nav-box" style="height: 160px;">
-		<!--row 1-->
-		<div class="strech-content-row" style="align-self: stretch; height: 60px">
+		<!--#1 row-->	
+        <div class="strech-content-row" style="align-self: stretch; height: 60px">
 			<div class="autolayout-row-center">
-				<a href="dashboard_wykładowca.html">
+				<a href="LogIn.html">
 				<img src="logo.png" alt="logo ARPAS">
 				</a>
 				<form>
@@ -28,83 +28,69 @@
 				<div class="dropdown">
   					<button onclick="dropdown_action()" class="dropbtn" type="button" id="dropdown_button" data-toggle="dropdown" style="background-color: transparent; color: black; border: thin"><img src="icons/user.svg" style="height: 16px; margin-right: 8px; align-self: center">Moje konto<img src="./icons/chevron-down.svg" style="margin-left: 4px;"></button>
  					<div id="dropdown-menu" class="dropdown-list">
-    					<a class="dropdown-item" href="./Edytuj_profil_wykładowca.html">Moj profil</a>
+    					<a class="dropdown-item" href="./Profil.html">Moj profil</a>
 						<div class="dropdown-divider"></div>
     					<a class="dropdown-item" href="./LogIn.html">Wyloguj</a>
   					</div>
 				</div>
 			</div>
 		</div>
-        <!--row 2-->
+		<!--#2 row-->
 		<div class="strech-content-row" style="align-self: stretch;">
 			<div class="autolayout-row-center" style="align-self: stretch; gap: 40px;">
-				<a href="dashboard_wykładowca.html" class="nav-default">Dashboard</a>
-				<a href="Katalogi_wykładowca.html" class="nav-default">Katalogi</a>
-				<a href="Prace_Wykładowca.html" class="nav-default">Aktualne prace</a>
-				<a href="Archiwum_prac_wykładowca.html" class="nav-default">Archiwum prac</a>
+				<a href="dashboard.html" style="text-decoration: none; color: black;">Dashboard</a>
+				<a href="Katalogi.html" style="text-decoration: none; color: black;">Katalogi</a>
+				<a href="Prace_Student.html" style="font-weight: 600; font-size: 16px; line-height: 17px; text-decoration: none; color: black">Aktualne prace</a>
+				<a href="Katalogi.html" style="text-decoration: none; color: black;">Archiwum prac</a>
 			</div>
-			<!--for teacher hidden button to add new work-->
+			<!--adding work hidden in teachers view-->
 			<!--<button class="b-primary-deafult" style="color: white"><img src="icons/plus.svg">Dodaj nową pracę</button>-->
 		</div>
 	</nav>
 	</div>
-	<!--back button-->
-	<div style="padding: 0px 10%; margin-top: 40px;">
-		<a href="Prace_Wykładowca.html" class="link-button"><img src="icons/chevron-left.svg" style="color: #4253AF; height: 20px; padding-bottom: 4px;">Wróć</a>
-	</div>
-	<!--form-->
-	<div style="padding: 0px 10%; margin-top: 24px; align-self: stretch;" class="autolayout-row-left">
-		<!--space to upload work-->
-		<div style="width: 50%; padding-right: 2%;">
-			<div class="upload-space">
-				<input type="file" name="some_file" class="upload_input">
-				<div class="miniature" data-label="example.pdf"><img src="./przykładowa_praca.jpg" style="max-width: 100%; max-height: 100%;"></div>
+	
+	<div style="padding: 0px 10%; margin-top: 40px; align-self: stretch;">
+		<!--label-->
+		<div style="align-self: stretch;">
+			<h2 class="header-main" style="width: 800px;">Profil</h2>
+		</div>
+		<!--box-->
+		<div style="align-self: stretch; width: 100%; padding: 40px 64px; background-color: #F6F7F9; border-radius: 8px; margin-top: 24px;" class="autolayout-row-left">
+			<!--Photo-->
+			<div style="width: 250px; height: 250px; border: 1px solid #949AD6; border-radius: 400px; margin-right: 16px; align-items: center; overflow: hidden;">
+				<img src="./vince-fleming-_THUISs23CI-unsplash.jpg" style="max-width: : 100%; max-height: 100%;">
+			</div>
+			<!--Info-->
+			<div class="autolayout-column-left" style="width: 60%; padding: 0px 64px;">
+				<div class="autolayout-column-left">
+					<h6 style="font-weight: 400; color: #2F2F2F; font-size: 14px;">Imię i Nazwisko</h6>
+					<h4 style="width: 800px; width: 100%; margin-top: -4px; font-size: 20px;">Mateusz Jędrusiak</h4>
+				</div>
+				<div class="autolayout-column-left" style="margin-top: 24px;">
+					<h6 style="font-weight: 400; color: #2F2F2F; font-size: 14px;">Tytuł naukowy</h6>
+					<h4 style="width: 800px; width: 100%; margin-top: -4px; font-size: 20px;">Doktor</h4>
+				</div>
+				<div class="autolayout-column-left" style="margin-top: 24px;">
+					<h6 style="font-weight: 400; color: #2F2F2F; font-size: 14px;">Wydział</h6>
+					<h4 style="width: 800px; width: 100%; margin-top: -4px; font-size: 20px;">Wydział Informatyki</h4>
+				</div>
+				<div class="autolayout-column-left" style="margin-top: 24px;">
+					<h6 style="font-weight: 400; color: #2F2F2F; font-size: 14px;">Numer gabinetu</h6>
+					<h4 style="width: 800px; width: 100%; margin-top: -4px; font-size: 20px;">209</h4>
+				</div>
+				<div class="autolayout-column-left" style="margin-top: 24px;">
+					<h6 style="font-weight: 400; color: #2F2F2F; font-size: 14px;">Termin konsultacji</h6>
+					<h4 style="width: 800px; width: 100%; margin-top: -4px; font-size: 20px;">Wtorek 12:00 - 14:00</h4>
+				</div>
+				<div class="autolayout-column-left" style="margin-top: 24px;">
+					<h6 style="font-weight: 400; color: #2F2F2F; font-size: 14px;">Email</h6>
+					<h4 style="width: 800px; width: 100%; margin-top: -4px; font-size: 20px;">mateuszjedrusiak@edu.pl</h4>
+				</div>
 			</div>
 		</div>
-		<!--inputs for details-->
-		<div style="width: 50%; padding-left: 2%;">
-			<!--Name-->
-			<div style="margin-top:" class="autolayout-column-left">
-				<label style="margin-bottom: 4px;">Nazwa pracy</label>
-				<input class="input-m" placeholder="Praca domowa nr 4 Sopińska" disabled>
-			</div>
-			<!--Catalog-->
-			<div style="margin-top: 24px;" class="autolayout-column-left">
-				<label style="margin-bottom: 4px;">Katalog</label>
-				<input class="input-m" placeholder="EDABA/2022Z/ćwieczenia" disabled>
-			</div>
-			<!--Type-->
-			<div style="margin-top: 24px;" class="autolayout-column-left">
-				<label style="margin-bottom: 4px;">Rodzaj pracy</label>
-				<input class="input-m" placeholder="Praca domowa" disabled>
-			</div>
-			<!--Student description-->
-			<div style="margin-top: 24px;" class="autolayout-column-left">
-				<label style="margin-bottom: 4px;">Dodatkowy opis</label>
-				<textarea class="input-m" id="exampleFormControlTextarea1" style="height: 120px;" disabled></textarea>
-			</div>
-			<!--Date-->
-			<div style="margin-top: 24px;" class="autolayout-column-left">
-				<label style="margin-bottom: 4px;">Data dodania</label>
-				<input class="input-m" placeholder="12-01-2023" disabled>
-			</div>
-			<!--Grade-->
-			<div style="margin-top: 24px;" class="autolayout-column-left">
-				<label style="margin-bottom: 4px;">Ocena</label>
-				<input class="input-m">
-			</div>
-			<!--Teachers description-->
-			<div style="margin-top: 24px;" class="autolayout-column-left">
-				<label style="margin-bottom: 4px;">Komentarz od nauczyciela</label>
-				<textarea class="input-m" id="exampleFormControlTextarea2" style="height: 120px;"></textarea>
-			</div>
-			<!--button download-->
-			<button class="b-ghost-deafult" style="margin-top: 24px; width: 100%;"><img src="./icons/download.svg" style="height: 16px;">Pobierz pracę</button>
-			<!--button save changes-->
-			<a href="Prace_Wykładowca.html"><button class="b-primary-deafult" style="margin-top: 8px; width: 100%;">Zapisz zmiany</button></a>
-		</div>
 	</div>
-		<!--footer-->
+
+	<!--footer-->
 	<footer class="frame1" style="margin-top: 80px;">
 		<div id="footer-box">
 			<div class="autolayout-column-right" style="width: 200px;">

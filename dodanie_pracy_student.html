@@ -15,26 +15,27 @@
 	<div style="height: 160px;">
     	<nav class="navbar nav-autolayout" id="nav-box" style="height: 160px;">
 		<!--#1 row-->	
-        <div class="strech-content-row" style="align-self: stretch; height: 60px">
+		<div class="strech-content-row" style="align-self: stretch; height: 60px">
 			<div class="autolayout-row-center">
+				<a href="dashboard.html">
 				<img src="logo.png" alt="logo ARPAS">
+				</a>
 				<form>
     				<input class="nav-search" type="search" placeholder="Search" aria-label="Search">
   				</form>
 			</div>
 			<div class="autolayout-row-center">
 				<div class="dropdown">
-  					<button onclick="myFunction()" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" style="background-color: #FFFFFF; color: black; border: thin"><img src="icons/user.svg" style="height: 16px; margin-right: 8px; align-self: center">Moje konto</button>
- 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    					<a class="dropdown-item" href="#">Ustawienia</a>
-    					<a class="dropdown-item" href="#">Moj profil</a>
+  					<button onclick="dropdown_action()" class="dropbtn" type="button" id="dropdown_button" data-toggle="dropdown" style="background-color: transparent; color: black; border: thin"><img src="icons/user.svg" style="height: 16px; margin-right: 8px; align-self: center">Moje konto<img src="./icons/chevron-down.svg" style="margin-left: 4px;"></button>
+ 					<div id="dropdown-menu" class="dropdown-list">
+    					<a class="dropdown-item" href="./Edytuj_profil.html">Moj profil</a>
 						<div class="dropdown-divider"></div>
-    					<a class="dropdown-item" href="#">Wyloguj</a>
+    					<a class="dropdown-item" href="./LogIn.html">Wyloguj</a>
   					</div>
 				</div>
 			</div>
 		</div>
-		<!--#2 row-->
+       <!--#2 row-->
 		<div class="strech-content-row" style="align-self: stretch;">
 			<div class="autolayout-row-center" style="align-self: stretch; gap: 40px;">
 				<a href="dashboard.html" class="nav-default">Dashboard</a>
@@ -47,14 +48,14 @@
 	</div>
 	<!--back button-->
 	<div style="padding: 0px 10%; margin-top: 40px;">
-		<a class="link-button"><img src="icons/chevron-left.svg" style="color: #4253AF; height: 20px; padding-bottom: 4px;">Wróć</a>
+		<a href="dashboard.html" class="link-button"><img src="icons/chevron-left.svg" style="color: #4253AF; height: 20px; padding-bottom: 4px;">Wróć</a>
 	</div>
 	<div style="padding: 0px 10%; margin-top: 24px; align-self: stretch;" class="autolayout-row-left">
 		<div style="width: 50%; padding-right: 2%;">
+			<!--upload space-->
 			<div class="upload-space">
-				<input type="file" name="some_file" class="upload_input">
-				<span class="upload-space__prompt">Drop your work here or click to upload</span>
-				<script src="/js/scripts.js"></script>
+				<span class="upload-space__prompt">Drop your work here or <span class="button" style="color: #4253AF" id="browse-button"> click </span>to browse files</span>
+				<input type="file" id="browse" hidden>
 			</div>
 		</div>
 		<div style="width: 50%; padding-left: 2%;">
@@ -85,7 +86,7 @@
 				<label style="margin-bottom: 4px;">*Dodatkowy opis</label>
 				<textarea class="input-m" id="exampleFormControlTextarea1" style="height: 120px;"></textarea>
 			</div>
-			<button class="b-primary-deafult" style="margin-top: 24px; width: 100%;">Dodaj pracę</button>
+			<a href="dashboard.html" style="text-decoration: none;"><button class="b-primary-deafult" style="margin-top: 24px; width: 100%;">Dodaj pracę</button></a>
 		</div>
 	</div>
 		<!--footer-->
