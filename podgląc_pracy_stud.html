@@ -14,8 +14,8 @@
 	<!--navigation-->
 	<div style="height: 160px;">
     	<nav class="navbar nav-autolayout" id="nav-box" style="height: 160px;">
-		<!--#1 row-->	
-        <div class="strech-content-row" style="align-self: stretch; height: 60px">
+		<!--#1 row-->
+		<div class="strech-content-row" style="align-self: stretch; height: 60px">
 			<div class="autolayout-row-center">
 				<a href="LogIn.html">
 				<img src="logo.png" alt="logo ARPAS">
@@ -28,29 +28,27 @@
 				<div class="dropdown">
   					<button onclick="dropdown_action()" class="dropbtn" type="button" id="dropdown_button" data-toggle="dropdown" style="background-color: transparent; color: black; border: thin"><img src="icons/user.svg" style="height: 16px; margin-right: 8px; align-self: center">Moje konto<img src="./icons/chevron-down.svg" style="margin-left: 4px;"></button>
  					<div id="dropdown-menu" class="dropdown-list">
-    					<a class="dropdown-item" href="./Edytuj_profil_wykładowca.html">Moj profil</a>
+    					<a class="dropdown-item" href="./Edytuj_profil.html">Moj profil</a>
 						<div class="dropdown-divider"></div>
     					<a class="dropdown-item" href="./LogIn.html">Wyloguj</a>
   					</div>
 				</div>
 			</div>
 		</div>
-		<!--#2 row-->
+        <!--#2 row-->
 		<div class="strech-content-row" style="align-self: stretch;">
 			<div class="autolayout-row-center" style="align-self: stretch; gap: 40px;">
-				<a href="dashboard_wykładowca.html" class="nav-default">Dashboard</a>
-				<a href="Katalogi_wykładowca.html" class="nav-default">Katalogi</a>
-				<a href="Prace_Wykładowca.html" class="nav-default">Aktualne prace</a>
-				<a href="Archiwum_prac_wykładowca.html" class="nav-default">Archiwum prac</a>
+				<a href="dashboard.html" class="nav-default">Dashboard</a>
+				<a href="Katalogi.html" class="nav-default">Moje katalogi</a>
+				<a href="Prace_Student.html" class="nav-default">Moje prace</a>
 			</div>
-			<!--adding work hidden in teachers view-->
-			<!--<button class="b-primary-deafult" style="color: white"><img src="icons/plus.svg">Dodaj nową pracę</button>-->
+			<a href="dodanie_pracy_student.html" style="text-decoration: none"><button class="b-primary-deafult" style="color: white"><img src="icons/plus.svg">Dodaj nową pracę</button></a>
 		</div>
 	</nav>
 	</div>
 	<!--back button-->
 	<div style="padding: 0px 10%; margin-top: 40px;">
-		<a class="link-button" href="Prace_Wykładowca.html"><img src="icons/chevron-left.svg" style="color: #4253AF; height: 20px; padding-bottom: 4px;">Wróć</a>
+		<a class="link-button"><img src="icons/chevron-left.svg" style="color: #4253AF; height: 20px; padding-bottom: 4px;">Wróć</a>
 	</div>
 	<!--form-->
 	<div style="padding: 0px 10%; margin-top: 24px; align-self: stretch;" class="autolayout-row-left">

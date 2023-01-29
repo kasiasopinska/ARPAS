@@ -29,7 +29,7 @@
 				<div class="dropdown">
   					<button onclick="dropdown_action()" class="dropbtn" type="button" id="dropdown_button" data-toggle="dropdown" style="background-color: transparent; color: black; border: thin"><img src="icons/user.svg" style="height: 16px; margin-right: 8px; align-self: center">Moje konto<img src="./icons/chevron-down.svg" style="margin-left: 4px;"></button>
  					<div id="dropdown-menu" class="dropdown-list">
-    					<a class="dropdown-item" href="./Profil.html">Moj profil</a>
+    					<a class="dropdown-item" href="./Edytuj_profil.html">Moj profil</a>
 						<div class="dropdown-divider"></div>
     					<a class="dropdown-item" href="./LogIn.html">Wyloguj</a>
   					</div>
@@ -43,7 +43,7 @@
 				<a href="Katalogi.html" style="text-decoration: none; color: black;">Moje katalogi</a>
 				<a href="Prace_Student.html" style="font-weight: 600; font-size: 16px; line-height: 17px; text-decoration: none; color: black">Moje prace</a>
 			</div>
-			<button class="b-primary-deafult" style="color: white"><img src="icons/plus.svg">Dodaj nową pracę</button>
+			<a href="dodanie_pracy_student.html" style="text-decoration: none"><button class="b-primary-deafult" style="color: white"><img src="icons/plus.svg">Dodaj nową pracę</button></a>
 		</div>
 	</nav>
 	</div>
@@ -63,7 +63,7 @@
 				<form>
     				<input class="search-small" type="search" placeholder="Nazwa pracy, nazwa przedmiotu..." aria-label="Search">
   				</form>
-				<button type="button" style="height: 42px; width: 80px; background-color: #949AD6; color: white; border: thin; border-radius: 4px;">Szukaj</button>
+				<button type="button" class="b-primary-deafult">Szukaj</button>
 			</div>
 			<div class="autolayout-row-right" style="align-self: stretch; gap: 8px; height: 42px;">
 				<h6 style="font-size: 16px; font-weight: 400; margin-top: 8px;">Sortuj</h6>
@@ -96,7 +96,7 @@
       				<td>Raport z laboratorium nr5</td>
       				<td>Digital Circuits [EDC]</td>
      				<td>5/10</td>
-					<td style="width: 64px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+					<td style="width: 64px; text-align: center;"><a href="podgląc_pracy_stud.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 				<!--row 2-->
     			<tr>
@@ -104,7 +104,7 @@
       				<td>Dokumentacja do projektu końcowego</td>
       				<td>Microprocessor Systems [EMISY]</td>
      	 			<td>13/15</td>
-					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+					<td style="width: 40px; text-align: center;"><a href="podgląc_pracy_stud.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 				<!--row 3-->
     			<tr>
@@ -112,7 +112,7 @@
       				<td>Raport z laboratorium nr4</td>
 					<td>Digital Circuits [EDC]</td>
       				<td>7/10</td>
-					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+					<td style="width: 40px; text-align: center;"><a href="podgląc_pracy_stud.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 				<!--row 4-->
     			<tr>
@@ -120,7 +120,7 @@
       				<td>Rozwiązanie ćwiczeń Sopińska</td>
 					<td>Languages, Automata and Computation [ELAC]</td>
       				<td>8/8</td>
-					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+					<td style="width: 40px; text-align: center;"><a href="podgląc_pracy_stud.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 				<!--row 5-->
     			<tr>
@@ -128,7 +128,7 @@
       				<td>Raport_grupa3</td>
 					<td>Electronics [EELE1]</td>
       				<td></td>
-					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+					<td style="width: 40px; text-align: center;"><a href="podgląc_pracy_stud.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 				<!--row 6-->
     			<tr>
@@ -136,7 +136,7 @@
       				<td>Raport laboratorium nr3</td>
 					<td>Digital Circuits [EDC]</td>
       				<td>8/10</td>
-					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+					<td style="width: 40px; text-align: center;"><a href="podgląc_pracy_stud.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 				<!--row 7-->
     			<tr>
@@ -144,101 +144,10 @@
       				<td>Sopińska rozwiązanie ćwiczeń</td>
 					<td>Languages, Automata and Computation [ELAC]</td>
       				<td>9/9</td>
-					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+					<td style="width: 40px; text-align: center;"><a href="podgląc_pracy_stud.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 		</table>
-		<!--sorting table-->
-		<script>
-				function sortTable(n) {
-				var icon_change = n;
-  				var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-				table = document.getElementById("myTable");
-  				switching = true;
-  				//Set the sorting direction to ascending:
-  				dir = "asc"; 
-  				/*Make a loop that will continue until
-  				no switching has been done:*/
-  				while (switching) {
-    			//start by saying: no switching is done:
-    			switching = false;
-    			rows = table.rows;
-    			/*Loop through all table rows (except the
-    			first, which contains table headers):*/
-    			for (i = 1; i < (rows.length - 1); i++) {
-      			//start by saying there should be no switching:
-      			shouldSwitch = false;
-      			/*Get the two elements you want to compare,
-      			one from current row and one from the next:*/
-      			x = rows[i].getElementsByTagName("TD")[n];
-      			y = rows[i + 1].getElementsByTagName("TD")[n];
-      			/*check if the two rows should switch place,
-      			based on the direction, asc or desc:*/
-      			if (dir == "asc") {
-        		if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-          			//if so, mark as a switch and break the loop:
-          			shouldSwitch= true;
-					break;
-					}
-			  	} else if (dir == "desc") {
-        		if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-          			//if so, mark as a switch and break the loop:
-          			shouldSwitch = true;
-          			break;
-        		}
-      			}
-    			}
-    			if (shouldSwitch) {
-			  /*If a switch has been marked, make the switch
-			  and mark that a switch has been done:*/
-			  rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-			  switching = true;
-			  //Each time a switch is done, increase this count by 1:
-			  switchcount ++;      
-			} else {
-			  /*If no switching has been done AND the direction is "asc",
-			  set the direction to "desc" and run the while loop again.*/
-			  if (switchcount == 0 && dir == "asc") {
-				dir = "desc";
-				switching = true;
-			  }
-			}
-		  }
-				if(icon_change == 0)
-				{
-					let disp_image = document.getElementById("icon-date")
-					if(disp_image.src.match("icons/sort_descending_line.svg")){
-					disp_image.src ="icons/sort_ascending_line.svg"
-					}
-					else{
-						disp_image.src ="icons/sort_descending_line.svg"
-					}
-				}
-				else if(icon_change == 1)
-				{
-					let disp_image = document.getElementById("icon-title")
-					document.getElementById("icon-date").style.display = "none"
-					document.getElementById("icon-subject").style.display = "none"
-					if(disp_image.src.match("icons/AZ_sort_ascending_letters_line.svg")){
-						disp_image.src = "icons/ZA_sort_descending_letters_line.svg"
-					}
-					else{
-						disp_image.src = "icons/AZ_sort_ascending_letters_line.svg"
-					}
-				}
-				else if(icon_change ==2){
-					let disp_image = document.getElementById("icon-title")
-					document.getElementById("icon-date").style.display = "none"
-					document.getElementById("icon-title").style.display = "none"
-					if(disp_image.src.match("icons/AZ_sort_ascending_letters_line.svg")){
-						disp_image.src = "icons/ZA_sort_descending_letters_line.svg"
-					}
-					else{
-						disp_image.src = "icons/AZ_sort_ascending_letters_line.svg"
-					}
-				}
-					
-				}
-		</script>
+		
 		<!--Stare prace 1-->
 		<!--label-->
 		<div class="strech-content-row" style="align-self: stretch; margin-top: 80px;">
@@ -253,7 +162,7 @@
 				<form>
     				<input class="search-small" type="search" placeholder="Nazwa pracy, nazwa przedmiotu..." aria-label="Search">
   				</form>
-				<button type="button" style="height: 42px; width: 80px; background-color: #949AD6; color: white; border: thin; border-radius: 4px;">Szukaj</button>
+				<button type="button" class="b-primary-deafult">Szukaj</button>
 			</div>
 			<div class="autolayout-row-right" style="align-self: stretch; gap: 8px; height: 42px;">
 				<h6 style="font-size: 16px; font-weight: 400; margin-top: 8px;">Sortuj</h6>
@@ -271,61 +180,57 @@
 			</div>
 		</div>
 		<!--table with works-->
-		<table class="table" style="margin-top: 24px;">
+		<table class="table" style="margin-top: 24px;" id="myTable-old2">
 			<!--table headings-->
-  			<thead>
   				<tr>
-      				<th scope="col" style="width: 30%;">Tytuł pracy</th>
-      				<th scope="col" style="width: 25%;">Przedmiot</th>
-      				<th scope="col" style="width: 20%;">Ocena</th>
-					<th scope="col" style="width: 20%;">Data dodania pracy</th>
+					<th scope="col" style="width: 20%;" onclick="sortTable(0)">Data dodania</th>
+      				<th scope="col" style="width: 30%;" onclick="sortTable(1)">Tytuł pracy</th>
+      				<th scope="col" style="width: 25%;" onclick="sortTable(2)">Przedmiot</th>
+      				<th scope="col" style="width: 20%;" onclick="sortTable(3)">Ocena</th>
 					<th scope="col" style="width: 5%;"></th>
     			</tr>
-  			</thead>
-			<!--table rows-->
-  			<tbody>
 				<!--row 1-->
     			<tr>
-      				<td>Mark</td>
-      				<td>Otto</td>
-     				<td>@mdo</td>
-					<td>12.06.2022</td>
-					<td style="width: 64px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+					<td>23.06.2022</td>
+      				<td>Raport 6</td>
+      				<td>Data Bases [EDABA]</td>
+     				<td>3/4</td>
+					<td style="width: 64px; text-align: center;"><a href="podgląc_pracy_stud.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 				<!--row 2-->
     			<tr>
-      				<td>Jacob</td>
-      				<td>Thornton</td>
-     	 			<td>@fat</td>
-					<td>12.06.2022</td>
-					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+					<td>22.06.2022</td>
+      				<td>Dokumentacja do projektu końcowego</td>
+      				<td>Cryptography and Information Security [ECRYP]</td>
+     	 			<td>12/15</td>
+					<td style="width: 40px; text-align: center;"><a href="podgląc_pracy_stud.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 				<!--row 3-->
     			<tr>
-      				<td>Larry the Bird</td>
-					<td>Larry the Bird</td>
-      				<td>@twitter</td>
-					<td>10.06.2022</td>
-					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+					<td>22.06.2022</td>
+      				<td>Projekt końcowy</td>
+					<td>Digital Signal Processing [EDISP]</td>
+      				<td>43/50</td>
+					<td style="width: 40px; text-align: center;"><a href="podgląc_pracy_stud.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 				<!--row 4-->
     			<tr>
-      				<td>Larry the Bird</td>
-					<td>Larry the Bird</td>
-      				<td>@twitter</td>
-					<td>07.06.2022</td>
-					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+					<td>18.06.2022</td>
+      				<td>Raport 5</td>
+					<td>Data Bases [EDABA]</td>
+      				<td>4/4</td>
+					<td style="width: 40px; text-align: center;"><a href="podgląc_pracy_stud.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 				<!--row 5-->
     			<tr>
-      				<td>Larry the Bird</td>
-					<td>Larry the Bird</td>
-      				<td>@twitter</td>
 					<td>12.06.2022</td>
-					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+      				<td>Praca domowa 4</td>
+					<td>Dynamic Systems and Control [EDYCO]</td>
+      				<td>9/10</td>
+					<td style="width: 40px; text-align: center;"><a href="podgląc_pracy_stud.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
-  			</tbody>
 		</table>
+		
 		<div class="autolayout-row-left" style="align-self: stretch;"><a href="Wiecej_prac1.html" style="text-decoration: none;"><button class="b-ghost-deafult">Pokaż więcej</button></a></div>
 		
 		<!--Stare prace 2-->
@@ -341,7 +246,7 @@
 				<form>
     				<input class="search-small" type="search" placeholder="Nazwa pracy, nazwa przedmiotu..." aria-label="Search">
   				</form>
-				<button type="button" style="height: 42px; width: 80px; background-color: #949AD6; color: white; border: thin; border-radius: 4px;">Szukaj</button>
+				<button type="button" class="b-primary-deafult">Szukaj</button>
 			</div>
 			<div class="autolayout-row-right" style="align-self: stretch; gap: 8px; height: 42px;">
 				<h6 style="font-size: 16px; font-weight: 400; margin-top: 8px;">Sortuj</h6>
@@ -359,61 +264,57 @@
 			</div>
 		</div>
 		<!--table with works-->
-		<table class="table" style="margin-top: 24px;">
+		<table class="table" style="margin-top: 24px;" id="myTable-old1">
 			<!--table headings-->
-  			<thead>
   				<tr>
+					<th scope="col" style="width: 20%;">Data dodania</th>
       				<th scope="col" style="width: 30%;">Tytuł pracy</th>
       				<th scope="col" style="width: 25%;">Przedmiot</th>
       				<th scope="col" style="width: 20%;">Ocena</th>
-					<th scope="col" style="width: 20%;">Data dodania pracy</th>
 					<th scope="col" style="width: 5%;"></th>
     			</tr>
-  			</thead>
-			<!--table rows-->
-  			<tbody>
 				<!--row 1-->
     			<tr>
-      				<td>Mark</td>
-      				<td>Otto</td>
-     				<td>@mdo</td>
-					<td>12.06.2022</td>
-					<td style="width: 64px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+					<td>22.01.2022</td>
+      				<td>Praca końcowa Sopińska</td>
+      				<td>Academic Writing [EACAW]</td>
+     				<td>8/8</td>
+					<td style="width: 64px; text-align: center;"><a href="podgląc_pracy_stud.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 				<!--row 2-->
     			<tr>
-      				<td>Jacob</td>
-      				<td>Thornton</td>
-     	 			<td>@fat</td>
-					<td>12.06.2022</td>
-					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+					<td>21.01.2022</td>
+      				<td>Final raport K_Sopińska</td>
+      				<td>Algorithms, Data Structures [EADS]</td>
+     	 			<td>16/20</td>
+					<td style="width: 40px; text-align: center;"><a href="podgląc_pracy_stud.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 				<!--row 3-->
     			<tr>
-      				<td>Larry the Bird</td>
-					<td>Larry the Bird</td>
-      				<td>@twitter</td>
-					<td>10.06.2022</td>
-					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+					<td>8.01.2022</td>
+      				<td>Praca domowa 6 Sopińska</td>
+					<td>Probability and Statistics [EPRST]</td>
+      				<td>7/10</td>
+					<td style="width: 40px; text-align: center;"><a href="podgląc_pracy_stud.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 				<!--row 4-->
     			<tr>
-      				<td>Larry the Bird</td>
-					<td>Larry the Bird</td>
-      				<td>@twitter</td>
-					<td>07.06.2022</td>
-					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+					<td>5.01.2022</td>
+      				<td>Raport do laboratorium 5</td>
+					<td>Signals, Systems and Modulations [ESISM]</td>
+      				<td>7,5/10</td>
+					<td style="width: 40px; text-align: center;"><a href="podgląc_pracy_stud.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 				<!--row 5-->
     			<tr>
-      				<td>Larry the Bird</td>
-					<td>Larry the Bird</td>
-      				<td>@twitter</td>
-					<td>12.06.2022</td>
-					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+					<td>3.01.2022</td>
+      				<td>Praca domowa 5 Sopińska</td>
+					<td>Probability and Statistics [EPRST]</td>
+      				<td>7/15</td>
+					<td style="width: 40px; text-align: center;"><a href="podgląc_pracy_stud.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
-  			</tbody>
 		</table>
+		
 		<div class="autolayout-row-left" style="align-self: stretch;"><button class="b-ghost-deafult">Pokaż więcej</button></div>
 	</div>
 	<!--footer-->

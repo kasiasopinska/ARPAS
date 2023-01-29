@@ -30,7 +30,7 @@
 				<div class="dropdown">
   					<button onclick="dropdown_action()" class="dropbtn" type="button" id="dropdown_button" data-toggle="dropdown" style="background-color: transparent; color: black; border: thin"><img src="icons/user.svg" style="height: 16px; margin-right: 8px; align-self: center">Moje konto<img src="./icons/chevron-down.svg" style="margin-left: 4px;"></button>
  					<div id="dropdown-menu" class="dropdown-list">
-    					<a class="dropdown-item" href="./Profil.html">Moj profil</a>
+    					<a class="dropdown-item" href="./Edytuj_profil.html">Mój profil</a>
 						<div class="dropdown-divider"></div>
     					<a class="dropdown-item" href="./LogIn.html">Wyloguj</a>
   					</div>
@@ -44,9 +44,9 @@
 				<a href="Katalogi.html" class="nav-default">Moje katalogi</a>
 				<a href="Prace_Student.html" class="nav-default">Moje prace</a>
 			</div>
-			<a href="dodanie_pracy_student.html"><button class="b-primary-deafult" style="color: white"><img src="icons/plus.svg">Dodaj nową pracę</button></a>
+			<a href="dodanie_pracy_student.html" style="text-decoration: none;"><button class="b-primary-deafult" style="color: white"><img src="icons/plus.svg">Dodaj nową pracę</button></a>
 		</div>
-	</nav>
+		</nav>
 	</div>
 	<!--box for label and catalogs-->
 	<div class="autolayout-column-left" style="align-self: stretch; padding: 0px 10%; gap: 16px; margin-top: 40px;">
@@ -59,30 +59,36 @@
 			<div class="autolayout-row-left" style="align-self: stretch; gap: 24px;">
 				<!--card wykład-->
 				<div class="card" style="width: 280px; height: 170px;">
+				<a href="Prace_Student.html" style="text-decoration: none; color: black">
   					<div>
     				<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Computer Architecture</h5>
     				<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CTxxx-ISA-ECOAR]</p>
-					<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">rok akademicki 2020/2021 - sem. letni</p>
+					<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">rok akademicki 2022/2023 - sem. zimowy</p>
     				<div class="badge-purple"><h6 class="badge-purple-text" style="width: 50px;">Wykład</h6></div>
   					</div>
+				</a>
 				</div>
 				<!--card ćwieczenia-->
 				<div class="card" style="width: 280px; height: 170px;">
+				<a href="Prace_Student.html" style="text-decoration: none; color: black">
   					<div>
     				<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Cryptography and Information Security</h5>
     				<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CSCSN-ISA-ECRYP]</p>
-					<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">rok akademicki 2020/2021 - sem. letni</p>
+					<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">rok akademicki 2022/2023 - sem. zimowy</p>
     				<div class="badge-yellow"><h6 class="badge-yellow-text" style="width: 60px;">Ćwiczenia</h6></div>
   					</div>
+				</a>
 				</div>
 				<!--card laboratoria-->
 				<div class="card" style="width: 280px; height: 170px;">
+				<a href="Prace_Student.html" style="text-decoration: none; color: black">
   					<div>
     				<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">Languages, Automata and Computation</h5>
     				<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">[103A-CSCSN-ISA-ELAC]</p>
-					<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">rok akademicki 2020/2021 - sem. letni</p>
+					<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">rok akademicki 2022/2023 - sem. letni</p>
     				<div class="badge-blue"><h6 class="badge-blue-text" style="width: 68px;">Laboratoria</h6></div>
   					</div>
+				</a>
 				</div>
 			</div>
 		</div>
@@ -97,21 +103,25 @@
 			<div class="autolayout-row-left" style="align-self: stretch; gap: 24px;">
 				<!--card praca-->
 				<div class="card" style="width: 280px; height: 150px;">
+				<a href="podgląc_pracy_stud.html" style="text-decoration: none; color: black">
   					<div>
     				<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">“Raport z laboratorium 1”</h5>
     				<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">Computer Architecture</p>
 					<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">Dodano: 21.11.2022</p>
     				<div class="badge-sprawdzona"><h6 class="badge-sprawdzona-text" style="width: 75px;">Sprawdzona</h6></div>
   					</div>
+				</a>
 				</div>
 				<!--card praca-->
 				<div class="card" style="width: 280px; height: 150px;">
+				<a href="podgląc_pracy_stud.html" style="text-decoration: none; color: black">
   					<div>
     				<h5 class="card-title" style="font-weight: 500; font-size: 16px; line-height: 19px;">“Opis do projektu 1”</h5>
     				<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">Graphical User Interface</p>
 					<p class="card-text" style="font-weight: 400; font-size: 12px; line-height: 15px;">Dodano: 12.01.2022</p>
     				<div class="badge-niesprawdzona"><h6 class="badge-niesprawdzona-text" style="width: 100px;">Niesprawdzona</h6></div>
   					</div>
+				</a>
 				</div>
 			</div>
 		</div>

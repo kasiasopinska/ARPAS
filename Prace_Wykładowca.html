@@ -28,7 +28,7 @@
 				<div class="dropdown">
   					<button onclick="dropdown_action()" class="dropbtn" type="button" id="dropdown_button" data-toggle="dropdown" style="background-color: transparent; color: black; border: thin"><img src="icons/user.svg" style="height: 16px; margin-right: 8px; align-self: center">Moje konto<img src="./icons/chevron-down.svg" style="margin-left: 4px;"></button>
  					<div id="dropdown-menu" class="dropdown-list">
-    					<a class="dropdown-item" href="./Profil.html">Moj profil</a>
+    					<a class="dropdown-item" href="./Edytuj_profil_wykładowca.html">Moj profil</a>
 						<div class="dropdown-divider"></div>
     					<a class="dropdown-item" href="./LogIn.html">Wyloguj</a>
   					</div>
@@ -38,10 +38,10 @@
 		<!--#2 row-->
 		<div class="strech-content-row" style="align-self: stretch;">
 			<div class="autolayout-row-center" style="align-self: stretch; gap: 40px;">
-				<a href="dashboard.html" style="text-decoration: none; color: black;">Dashboard</a>
-				<a href="Katalogi.html" style="text-decoration: none; color: black;">Katalogi</a>
-				<a href="Prace_Student.html" style="font-weight: 600; font-size: 16px; line-height: 17px; text-decoration: none; color: black">Aktualne prace</a>
-				<a href="Katalogi.html" style="text-decoration: none; color: black;">Archiwum prac</a>
+				<a href="dashboard_wykładowca.html" style="text-decoration: none; color: black;">Dashboard</a>
+				<a href="Katalogi_wykładowca.html" style="text-decoration: none; color: black;">Katalogi</a>
+				<a href="Prace_Wykładowca.html" style="font-weight: 600; font-size: 16px; line-height: 17px; text-decoration: none; color: black">Aktualne prace</a>
+				<a href="Archiwum_prac_wykładowca.html" style="text-decoration: none; color: black;">Archiwum prac</a>
 			</div>
 			<!--adding work hidden in teachers view-->
 			<!--<button class="b-primary-deafult" style="color: white"><img src="icons/plus.svg">Dodaj nową pracę</button>-->
@@ -64,7 +64,7 @@
 				<form>
     				<input class="search-small" type="search" placeholder="Nazwa pracy, nazwa przedmiotu..." aria-label="Search">
   				</form>
-				<button type="button" style="height: 42px; width: 80px; background-color: #949AD6; color: white; border: thin; border-radius: 4px;">Szukaj</button>
+				<button type="button" class="b-primary-deafult">Szukaj</button>
 			</div>
 			<div class="autolayout-row-right" style="align-self: stretch; gap: 8px; height: 42px;">
 				<h6 style="font-size: 16px; font-weight: 400; margin-top: 8px;">Sortuj</h6>
@@ -102,63 +102,90 @@
     			<tr>
       				<td>Raport z laboratorium nr5</td>
       				<td>Digital Circuits [EDC]</td>
-					<td>Digital Circuits [EDC]</td>
+					<td>Kołaczkowski Kamil</td>
      				<td>5/10</td>
 					<td>3.01.2023</td>
 					<td style="width: 64px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 				<!--row 2-->
     			<tr>
-      				<td>Dokumentacja do projektu końcowego</td>
-      				<td>Microprocessor Systems [EMISY]</td>
-					<td>Digital Circuits [EDC]</td>
-     	 			<td>13/15</td>
-					<td>2.01.2023</td>
+      				<td>Raport 5</td>
+      				<td>Digital Circuits [EDC]</td>
+					<td>Maliszewski Michał</td>
+     	 			<td>8/10</td>
+					<td>3.01.2023</td>
 					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 				<!--row 3-->
     			<tr>
-      				<td>Raport z laboratorium nr4</td>
+      				<td>Raport z laboratorium 5</td>
 					<td>Digital Circuits [EDC]</td>
-					<td>Digital Circuits [EDC]</td>
+					<td>Holak Michalina</td>
       				<td>7/10</td>
-					<td>22.12.2022</td>
+					<td>2.01.2023</td>
 					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 				<!--row 4-->
     			<tr>
-      				<td>Rozwiązanie ćwiczeń Sopińska</td>
-					<td>Languages, Automata and Computation [ELAC]</td>
+      				<td>Raport z laboratorium nr 5</td>
 					<td>Digital Circuits [EDC]</td>
-      				<td>8/8</td>
-					<td>10.12.2022</td>
+					<td>Bąk Przemek</td>
+      				<td>8/10</td>
+					<td>2.01.2022</td>
 					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 				<!--row 5-->
     			<tr>
-      				<td>Raport_grupa3</td>
-					<td>Electronics [EELE1]</td>
+      				<td>Raport 5</td>
 					<td>Digital Circuits [EDC]</td>
-      				<td><button class="b-primary-deafult" style="padding: 4px 12px; color: white">Oceń</button></td>
-					<td>3.12.2022</td>
+					<td>Gałązka Julia</td>
+      				<td><a href="ocena_pracy_nauczyciel.html" style="text-decoration: none;"><button class="b-primary-deafult" style="padding: 4px 12px; color: white">Oceń</button></a></td>
+					<td>27.12.2022</td>
 					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 				<!--row 6-->
     			<tr>
-      				<td>Raport laboratorium nr3</td>
+      				<td>Raport laboratorium 5</td>
 					<td>Digital Circuits [EDC]</td>
-					<td>Digital Circuits [EDC]</td>
-      				<td>8/10</td>
-					<td>3.12.2022</td>
+					<td>Król Zuzanna</td>
+      				<td>8,5/10</td>
+					<td>27.12.2022</td>
 					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
 				<!--row 7-->
     			<tr>
-      				<td>Sopińska rozwiązanie ćwiczeń</td>
-					<td>Languages, Automata and Computation [ELAC]</td>
+      				<td>Raport_5</td>
 					<td>Digital Circuits [EDC]</td>
-      				<td>9/9</td>
-					<td>22.11.2022</td>
+					<td>Łączyński Łukasz</td>
+      				<td>9/10</td>
+					<td>27.12.2022</td>
+					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+    			</tr>
+				<!--row 8-->
+    			<tr>
+      				<td>Raport_4</td>
+					<td>Digital Circuits [EDC]</td>
+					<td>Łączyński Łukasz</td>
+      				<td>7/10</td>
+					<td>3.12.2022</td>
+					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+    			</tr>
+				<!--row 9-->
+    			<tr>
+      				<td>Raport lab 4</td>
+					<td>Digital Circuits [EDC]</td>
+					<td>Gałązka Julia</td>
+      				<td>4,5/10</td>
+					<td>2.12.2022</td>
+					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
+    			</tr>
+				<!--row 10-->
+    			<tr>
+      				<td>Raport laboratoria nr 4</td>
+					<td>Digital Circuits [EDC]</td>
+					<td>Pajor Konrad</td>
+      				<td>2/10</td>
+					<td>1.12.2022</td>
 					<td style="width: 40px; text-align: center;"><a href="Praca_szczegoly.html" style="width: 24px; color: black; font-size: 16px;">Więcej</a></td>
     			</tr>
   			</tbody>
